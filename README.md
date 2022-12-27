@@ -1,0 +1,1 @@
+*iiiff - iiif and only iiif*
