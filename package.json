@@ -1,23 +1,16 @@
 {
-  "name": "iiiff",
+  "name": "HostIIIF",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "emotion": "^11.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-iiif-viewer": "^1.0.2",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-iiif-viewer": "^1.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build": "rollup -c rollup.config.build.js --bundleConfigAsCjs"
+    "dev": "NODE_ENV=development rollup -c rollup.config.js  --bundleConfigAsCjs",
+    "build": "NODE_ENV=production rollup -c rollup.config.js --bundleConfigAsCjs"
   },
   "eslintConfig": {
     "extends": [
