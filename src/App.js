@@ -1,9 +1,13 @@
 import { Viewer } from "react-iiif-viewer"
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-		<Viewer iiifUrl="/data/info.json" />
+		<Viewer 
+          height="100vh"
+          width="100vw"
+          iiifUrl="/data/info.json" />
     </div>
   );
 }
