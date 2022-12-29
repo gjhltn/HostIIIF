@@ -6,7 +6,7 @@ const App = () =>
 		<Viewer 
           height="100vh"
           width="100vw"
-          iiifUrl="/data/info.json" />
+          iiifUrl="data/info.json" />
     </div>
 
 export default App;
