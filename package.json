@@ -45,6 +45,7 @@
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-replace": "^5.0.2",
+    "@rollup/plugin-terser": "^0.2.1",
     "fast-glob": "^3.2.12",
     "rollup": "^3.9.0",
     "rollup-plugin-livereload": "^2.0.5",
