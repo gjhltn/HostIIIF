@@ -43,7 +43,7 @@ export default {
 			presets: ['@babel/preset-env', ["@babel/preset-react", { runtime: "automatic" }]],
 			compact: false
 		}),
-		process.env.NODE_ENV === 'production' && terser(),
+		terser(),
 		process.env.NODE_ENV !== 'production' && serve({
 			verbose: true,
 			host: '192.168.1.74',
