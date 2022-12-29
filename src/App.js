@@ -1,5 +1,5 @@
 import { Viewer } from "react-iiif-viewer"
-import './App.css';
+//
 
 function App() {
   return (
