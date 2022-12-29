@@ -10,8 +10,7 @@ export default {
 	output: {
 		sourcemap: false,
 		file: 'build/HostIIIF.js',
-		format: 'iife',
-		sourcemap: true
+		format: 'iife'
 	},
 	plugins: [
 		commonjs({
