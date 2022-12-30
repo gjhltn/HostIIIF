@@ -5,7 +5,6 @@ import replace from '@rollup/plugin-replace'
 import nodePolyfills from 'rollup-plugin-polyfill-node'
 import terser from '@rollup/plugin-terser'
 import serve from 'rollup-plugin-serve'
-import fg from 'fast-glob'
 
 export default {
 	input: 'src/main.js',
@@ -15,15 +14,11 @@ export default {
 		format: 'iife'
 	},
 	preserveEntrySignatures: 'strict',
-	plugins: [		{
-			name: 'watch-external',
-			async buildStart() {
-				const files = await fg('./src/**/*')
-				for (let file of files) {
-					this.addWatchFile(file)
-				}
-			}
-		},
+	onwarn: function onwarn(warning, warn) {
+      if (warning.id.indexOf(__dirname + '/node_modules/') === 0) return;
+      warn(warning);
+  },
+	plugins: [	
 		commonjs({
 			include: ['./node_modules/**'],
 			requireReturnsDefault: 'auto'
